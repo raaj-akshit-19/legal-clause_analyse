@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Clause Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Legal Clause Analyzer</h1>
+            <p>Paste your legal document below to identify clause conditionality, exceptions, and requirements.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="legal-text" placeholder="Paste your legal text here... (e.g., 'If the tenant fails to pay rent, the landlord may terminate the agreement.')"></textarea>
+                <div class="button-group">
+                    <button id="analyze-btn" class="primary-btn">Analyze Document</button>
+                    <button id="clear-btn" class="secondary-btn">Clear</button>
+                </div>
+            </div>
+
+            <div id="results-section" class="results-section hidden">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="download-buttons">
+                        <button id="download-pdf" class="download-btn" title="Download as PDF">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            PDF
+                        </button>
+                        <button id="download-docx" class="download-btn" title="Download as Word Doc">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            DOCX
+                        </button>
+                    </div>
+                </div>
+                <div id="clauses-container" class="clauses-container">
+                    <!-- Clauses will be injected here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Legal Clause Analyzer AI</p>
+        </footer>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

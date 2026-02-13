@@ -1,0 +1,7 @@
+legal_analyzer.html
+*.ipynb
+*.pdf
+*.docx
+__pycache__
+.git
+.gitignore
